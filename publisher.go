@@ -10,6 +10,9 @@ import (
 const (
 	// DefaultBatchSize specifies the default number of records to read from a stream
 	DefaultBatchSize = 100
+
+	// DefaultInterval specifies the polling interval for the Start function
+	DefaultInterval = time.Second * 15
 )
 
 // Handler represents the target where events will be delivered
@@ -132,7 +135,7 @@ func Start(
 	opts ...StartOption, // options
 ) (<-chan struct{}, error) {
 	c := &config{
-		interval:  time.Second * 15,
+		interval:  DefaultInterval,
 		listener:  ListenerFunc(defaultListener),
 		batchSize: DefaultBatchSize,
 		delayFunc: lookupDelay,
