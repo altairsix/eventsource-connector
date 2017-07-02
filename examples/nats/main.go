@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/altairsix/eventsource"
-	"github.com/altairsix/eventsource-publisher"
-	"github.com/altairsix/eventsource-publisher/nats"
+	"github.com/altairsix/eventsource-connector/publisher"
+	"github.com/altairsix/eventsource-connector/publisher/nats"
 	go_nats "github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats-streaming"
 )
