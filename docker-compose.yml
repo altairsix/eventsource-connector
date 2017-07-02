@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=altairsix
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=altairsix
+
+  dynamodb:
+    image: savaki/dynamodb:latest
+    ports:
+      - "8000:8000"
+
+  nats:
+    image: nats:latest
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  nats_streaming:
+    image: nats-streaming:latest
+    links:
+      - nats
+    command:
+      - "--nats_server"
+      - "nats://nats:4222"

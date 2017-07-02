@@ -1,2 +1,4 @@
 # eventsource-publisher
-publishes events from an eventsource stream to NATS (and potentially other endpoints)
+
+publisher simplifies publishing events from an eventsource.StreamReader to NATS and other targes
+
