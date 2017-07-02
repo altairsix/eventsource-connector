@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/altairsix/eventsource-publisher/nats"
+	"github.com/altairsix/eventsource-connector/publisher/nats"
 	go_nats "github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats-streaming"
 	"github.com/stretchr/testify/assert"

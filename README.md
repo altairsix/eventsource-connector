@@ -1,4 +1,5 @@
-# eventsource-publisher
+# eventsource-connector
 
-publisher simplifies publishing events from an eventsource.StreamReader to NATS and other targets
+connector simplifies connecting eventsource to various technologies
+
 

@@ -3,7 +3,7 @@ package nats
 import (
 	"context"
 
-	"github.com/altairsix/eventsource-publisher"
+	"github.com/altairsix/eventsource-connector/publisher"
 	"github.com/nats-io/go-nats"
 	"github.com/nats-io/go-nats-streaming"
 )

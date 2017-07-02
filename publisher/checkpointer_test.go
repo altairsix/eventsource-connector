@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/altairsix/eventsource-publisher"
+	"github.com/altairsix/eventsource-connector/publisher"
 	"github.com/stretchr/testify/assert"
 )
 
