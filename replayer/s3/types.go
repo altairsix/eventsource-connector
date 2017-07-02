@@ -3,7 +3,6 @@ package s3
 import (
 	"errors"
 
-	"github.com/altairsix/eventsource"
 	"github.com/aws/aws-sdk-go/service/s3"
 )
 
@@ -57,7 +56,6 @@ func (r *Replayer) ReadEvent() ([]byte, error) {
 // s3uri will be of the form s3://bucket/path
 //
 func New(s3uri string, opts ...Option) *Replayer {
-	eventsource.StreamReader
 	c := &config{
 		filter: func(filename string) bool { return true },
 	}
